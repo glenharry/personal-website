@@ -2,25 +2,57 @@
   https://google-webfonts-helper.herokuapp.com/fonts/lato?subsets=latin
 */
 
-/* roboto-serif-600 - latin */
+/* sono-200 - latin */
 @font-face {
-  font-family: 'Roboto Serif';
+  font-family: 'Sono';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/assets/fonts/sono-v1-latin-200.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/assets/fonts/sono-v1-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/sono-v1-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/sono-v1-latin-200.woff') format('woff'), /* Modern Browsers */
+       url('/assets/fonts/sono-v1-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/assets/fonts/sono-v1-latin-200.svg#Sono') format('svg'); /* Legacy iOS */
+}
+/* sono-regular - latin */
+@font-face {
+  font-family: 'Sono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/sono-v1-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/assets/fonts/sono-v1-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/sono-v1-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/sono-v1-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/assets/fonts/sono-v1-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/assets/fonts/sono-v1-latin-regular.svg#Sono') format('svg'); /* Legacy iOS */
+}
+/* sono-600 - latin */
+@font-face {
+  font-family: 'Sono';
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
+  src: url('/assets/fonts/sono-v1-latin-600.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('/assets/fonts/roboto-serif-v8-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('/assets/fonts/roboto-serif-v8-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('/assets/fonts/sono-v1-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/sono-v1-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/sono-v1-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('/assets/fonts/sono-v1-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/assets/fonts/sono-v1-latin-600.svg#Sono') format('svg'); /* Legacy iOS */
 }
-/* roboto-serif-700 - latin */
+/* sono-800 - latin */
 @font-face {
-  font-family: 'Roboto Serif';
+  font-family: 'Sono';
   font-style: normal;
-  font-weight: 700;
-  font-display: swap;
+  font-weight: 800;
+  src: url('/assets/fonts/sono-v1-latin-800.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('/assets/fonts/roboto-serif-v8-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('/assets/fonts/roboto-serif-v8-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('/assets/fonts/sono-v1-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/sono-v1-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/sono-v1-latin-800.woff') format('woff'), /* Modern Browsers */
+       url('/assets/fonts/sono-v1-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/assets/fonts/sono-v1-latin-800.svg#Sono') format('svg'); /* Legacy iOS */
 }
 
 /* lato-300 - latin */
@@ -85,7 +117,7 @@ h1,
 h2,
 h3 {
 	font-family: var(--theme-font-family-serif);
-	font-weight: 700;
+	font-weight: 400;
 }
 
 h1 {
@@ -103,11 +135,11 @@ h3 {
 h1,
 h2 {
 	line-height: 1.1;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 h3 {
-	font-weight: 500;
+	font-weight: 400;
 }
 
 h6 {
