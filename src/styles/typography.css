@@ -1,0 +1,191 @@
+/* Special thanks to this tool for local fonts CSS generation:
+  https://google-webfonts-helper.herokuapp.com/fonts/lato?subsets=latin
+*/
+
+/* sono-200 - latin */
+@font-face {
+  font-family: "Sono";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/sono-v1-latin-200.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/sono-v1-latin-200.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/sono-v1-latin-200.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/sono-v1-latin-200.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/sono-v1-latin-200.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/sono-v1-latin-200.svg#Sono")
+      format("svg"); /* Legacy iOS */
+}
+/* sono-regular - latin */
+@font-face {
+  font-family: "Sono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/sono-v1-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/sono-v1-latin-regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/sono-v1-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/sono-v1-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/sono-v1-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/sono-v1-latin-regular.svg#Sono")
+      format("svg"); /* Legacy iOS */
+}
+/* sono-600 - latin */
+@font-face {
+  font-family: "Sono";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/sono-v1-latin-600.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/sono-v1-latin-600.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/sono-v1-latin-600.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/sono-v1-latin-600.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/sono-v1-latin-600.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/sono-v1-latin-600.svg#Sono")
+      format("svg"); /* Legacy iOS */
+}
+
+/* lato-300 - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local(""), url("/assets/fonts/lato-v23-latin-300.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/assets/fonts/lato-v23-latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lato-regular - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""),
+    url("/assets/fonts/lato-v23-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/assets/fonts/lato-v23-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lato-700 - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(""), url("/assets/fonts/lato-v23-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/assets/fonts/lato-v23-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lato-700italic - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local(""),
+    url("/assets/fonts/lato-v23-latin-700italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/assets/fonts/lato-v23-latin-700italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* Fluid font size variables, for browsers that support clamp */
+@supports (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --font-size-sm: clamp(0.8rem, 0.3vw + 0.7rem, 0.9rem);
+    --font-size-base: clamp(1rem, 0.5vw + 0.9rem, 1.3rem);
+    --font-size-md: clamp(1.3rem, 0.8vw + 1.1rem, 1.7rem);
+    --font-size-lg: clamp(1.6rem, 1.3vw + 1.3rem, 2.2rem);
+    --font-size-xl: clamp(2rem, 2vw + 1.5rem, 3rem);
+    --font-size-xxl: clamp(2.4rem, 2.9vw + 1.8rem, 3.9rem);
+    --font-size-xxxl: clamp(3.1rem, 4.3vw + 2rem, 5.3rem);
+  }
+}
+/* Fallback variables for browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --font-size-sm: 0.8rem;
+    --font-size-base: 1rem;
+    --font-size-md: 1.3rem;
+    --font-size-lg: 1.6rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.4rem;
+    --font-size-xxxl: 3.1rem;
+  }
+  @media screen and (min-width: 1200px) {
+    :root {
+      --font-size-sm: 0.9rem;
+      --font-size-base: 1.3rem;
+      --font-size-md: 1.7rem;
+      --font-size-lg: 2.2rem;
+      --font-size-xl: 3rem;
+      --font-size-xxl: 3.9rem;
+      --font-size-xxxl: 5.3rem;
+    }
+  }
+}
+
+html,
+body {
+  line-height: 1.5;
+  font-family: var(--theme-font-family-sans);
+  font-size: var(--font-size-base);
+  color: var(--theme-on-bg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--theme-font-family-serif);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+}
+
+h1,
+h2 {
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+h6 {
+  font-size: var(--font-size-sm);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 0 1rem 0;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  border-left: 0.25rem solid var(--theme-on-bg);
+}

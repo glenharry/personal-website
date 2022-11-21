@@ -1,0 +1,50 @@
+---
+import Logo from "../components/Logo.astro";
+import { Icon } from "astro-icon";
+
+const { href, title, body } = Astro.props;
+---
+
+<nav>
+  <div class="nav-container">
+    <Logo />
+    <Icon pack="mdi" name="menu" />
+  </div>
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Blog</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+
+<style lang="css">
+  [astro-icon] {
+    width: 36px;
+  }
+  nav {
+    background-color: var(--theme-on-bg);
+    color: var(--theme-on-primary);
+  }
+  .nav-container {
+    height: 60px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
+    padding: 2rem 1.25rem;
+    width: 80%;
+    margin-left: auto;
+  }
+</style>
