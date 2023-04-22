@@ -1,0 +1,29 @@
+.card {
+  background-color: var(--theme-primary-bg);
+  margin: 0 auto;
+  color: var(--theme-on-primary);
+  width: 100%;
+  border-radius: var(--theme-button-border-radius);
+  border: solid 1px var(--theme-on-primary);
+  padding: 1rem;
+ @media  screen and (min-width: 480px){
+width: 80%;
+ }
+ @media  screen and (min-width: 600px){
+  width: 50%;
+   }
+}
+
+.card-content {
+}
+
+.card-title {
+  margin-top: 1rem;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.card-cta {
+}

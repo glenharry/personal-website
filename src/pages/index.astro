@@ -1,6 +1,21 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
 import HomeHero from "../components/HomeHero.astro";
+import SkillTag from "../components/SkillTag.astro";
+import Button from "../components/buttons/Button.astro"
+const skills = [
+  "html",
+  "css",
+  "javascript",
+  "jquery",
+  "react.js",
+  "astro.js",
+  "accessibility",
+  "sass",
+  "bootstrap",
+  "ui design",
+  "ux design",
+];
 ---
 
 <MasterLayout>
@@ -9,4 +24,73 @@ import HomeHero from "../components/HomeHero.astro";
     body="Meticulous and pragmatic Frontend Developer."
     cta="Contact"
   />
+
+  <div class="container module">
+    <div class="row">
+      <div class="col-12 col-lg-8 mx-auto">
+        <p>
+          8 years of proven experience in e-commerce has given me the
+          opportunity to contribute meaningfully to industry leading brands. 15
+          years as a designer in several fields (Web/UI/UX/Graphic) has taught
+          me strong design principles enabling pixel perfect execution every
+          time.
+        </p>
+        <p>
+          My time in e-commerce has given me the opportunity to build a great
+          skill set across HTML5, CSS3, Javascript, JQuery and React and has
+          seen me building and deploying a wide range of content across great
+          brands.
+        </p>
+        <p>
+          I place great emphasis on clean and performant code and always strive
+          to ensure the code I write is accessible and up to date with the
+          latest industry standards.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container module">
+    <div class="row">
+      <div class="col-10 col-lg-6 mx-auto">
+        <div class="skill-tag-wrapper">
+          {skills.map((skill) => <SkillTag key={skill} title={skill} />)}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container module">
+    <hr class="divider-decoration" />
+  </div>
+  <div class="container module">
+    <div class="row">
+      <div class="col-11 col-lg-10 mx-auto">
+        <h2 class="section-title">Some things I’ve created.</h2>
+      </div>
+      <div class="col-11 col-lg-10 mx-auto">
+        <div class="card">
+          
+
+          <img src="/assets/images/card-image.jpg" alt="" class="card-img" />
+          <div class="card-content">
+            <h2 class="card-title">Image Delivery Method.</h2>
+            <p class="card-body">Resolution switching, art direction, low quality image placeholder.</p>
+            <Button href="/" title="read more" primary="primary" />
+
+          </div>
+        </div>
+        <div class="card">
+          
+
+          <img src="/assets/images/card-image.jpg" alt="" class="card-img" />
+          <div class="card-content">
+            <h2 class="card-title">Image Delivery Method.</h2>
+            <p class="card-body">Resolution switching, art direction, low quality image placeholder.</p>
+            <Button href="/" title="read more" primary="primary" />
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </MasterLayout>

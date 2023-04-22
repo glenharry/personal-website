@@ -1,3 +1,5 @@
+@import url("./userInterface/card.scss");
+
 /* ui components */
 /* ui components */
 /* ui components */
@@ -61,4 +63,36 @@ a.btn {
 button.btn {
   cursor: pointer;
   outline: none;
+}
+
+.skill-tag-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.skill-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 8px;
+  gap: 10px;
+  border: 1px solid var(--theme-primary-surface-1);
+  border-radius: 8px;
+}
+
+.skill-tag:hover {
+  border: 1px solid #7fff60;
+  color: #7fff60;
+}
+
+.divider-decoration {
+margin: 0 auto;
+width: 123px;
+height: 6px;
+background: var(--theme-primary-surface-1);
+opacity: 1;
 }
