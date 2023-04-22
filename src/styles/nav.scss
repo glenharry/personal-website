@@ -1,0 +1,98 @@
+/* use this method for nav */
+/* https://www.youtube.com/watch?v=gXkqy0b4M5g */
+
+nav {
+  background-color: var(--theme-primary-bg);
+  color: var(--theme-on-primary);
+  display: flex;
+  padding: 0 24px;
+
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+}
+
+ul {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  height: 92vh;
+  background-color: var(--theme-primary-bg);
+  top: 8vh;
+  width: 100%;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+
+  @media (min-width: 768px) {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    list-style: none;
+    width: 50%;
+  }
+}
+
+li {
+  list-style-type: none;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  @media (min-width: 768px) {
+    opacity: 1;
+  }
+}
+
+li a {
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-icon {
+  cursor: pointer;
+}
+
+.nav-icon > div {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 5px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.nav-active {
+  animation: normal 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line-1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  transition: all 0.5s ease-in-out;
+}
+.toggle .line-2 {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.toggle .line-3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  transition: all 0.5s ease-in-out;
+}

@@ -1,6 +1,6 @@
 ---
 import Nav from "../components/Nav.astro";
-import "../styles/index.css";
+import "../styles/index.scss";
 ---
 
 <html lang="en">
@@ -9,7 +9,8 @@ import "../styles/index.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content="" />
-
+    <link rel="stylesheet" href="style.css" />
+    <script src="../main.js"></script>
     <title>Astro</title>
   </head>
   <body>
@@ -17,16 +18,3 @@ import "../styles/index.css";
     <slot />
   </body>
 </html>
-
-<style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  html,
-  body {
-    overflow-x: hidden;
-    position: relative;
-  }
-</style>
