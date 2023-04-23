@@ -1,3 +1,11 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
 .card {
   background-color: var(--theme-primary-bg);
   margin: 0 auto;
@@ -6,12 +14,12 @@
   border-radius: var(--theme-button-border-radius);
   border: solid 1px var(--theme-on-primary);
   padding: 1rem;
- @media  screen and (min-width: 480px){
-width: 80%;
- }
- @media  screen and (min-width: 600px){
-  width: 50%;
-   }
+  @media screen and (min-width: 480px) {
+    width: 80%;
+  }
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
 }
 
 .card-content {

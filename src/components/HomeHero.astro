@@ -1,9 +1,9 @@
 ---
 import Button from "./buttons/Button.astro";
-const { href, title, body, cta, img } = Astro.props;
+const { href, title, body, cta, img, classes } = Astro.props;
 ---
 
-<div class="container home-hero module">
+<div class={`container home-hero module ${classes}`}>
   <div class="row">
     <div class="col col-12 col-md-6">
       <div class="content-wrapper">

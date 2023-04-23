@@ -2,7 +2,7 @@
 import MasterLayout from "../layouts/MasterLayout.astro";
 import HomeHero from "../components/HomeHero.astro";
 import SkillTag from "../components/SkillTag.astro";
-import Button from "../components/buttons/Button.astro"
+import Button from "../components/buttons/Button.astro";
 const skills = [
   "html",
   "css",
@@ -20,8 +20,9 @@ const skills = [
 
 <MasterLayout>
   <HomeHero
-    title="Hero Text. Lorem ipsum dolor sit amet."
-    body="Meticulous and pragmatic Frontend Developer."
+    classes=""
+    title="Hi, I'm Glen, a Front-End Developer."
+    body="Turning Design into Reality with Clean, Accessible Code."
     cta="Contact"
   />
 
@@ -29,22 +30,32 @@ const skills = [
     <div class="row">
       <div class="col-12 col-lg-8 mx-auto">
         <p>
-          8 years of proven experience in e-commerce has given me the
-          opportunity to contribute meaningfully to industry leading brands. 15
-          years as a designer in several fields (Web/UI/UX/Graphic) has taught
-          me strong design principles enabling pixel perfect execution every
-          time.
+          With 8 years of proven experience in e-commerce, I've had the
+          privilege of contributing to industry-leading brands and building a
+          skill set that spans HTML5, CSS3, Javascript, JQuery, and React. From
+          building and deploying content to ensuring clean, performant code, I
+          always strive to uphold the latest industry standards.
         </p>
         <p>
-          My time in e-commerce has given me the opportunity to build a great
-          skill set across HTML5, CSS3, Javascript, JQuery and React and has
-          seen me building and deploying a wide range of content across great
-          brands.
+          Over my 15 years as a designer, I've developed strong design
+          principles that enable me to execute pixel-perfect work every time.
+          Whether it's web design, UI/UX, or graphic design, my work always
+          prioritizes user experience and aesthetics. For example, I recently
+          led a redesign of a popular e-commerce site that resulted in a 20%
+          increase in conversion rates.
         </p>
         <p>
-          I place great emphasis on clean and performant code and always strive
-          to ensure the code I write is accessible and up to date with the
-          latest industry standards.
+          My technical skills are complemented by strong soft skills such as
+          communication, collaboration, and problem-solving. I value working
+          closely with stakeholders to ensure their vision is translated into a
+          final product that exceeds their expectations.
+        </p>
+        <p>
+          By combining my technical expertise, design principles, and soft
+          skills, I bring a unique perspective to every project I work on.
+          Whether it's improving website performance, creating a new user
+          experience, or developing a brand identity, I'm passionate about
+          delivering exceptional results that exceed expectations.
         </p>
       </div>
     </div>
@@ -65,29 +76,31 @@ const skills = [
   <div class="container module">
     <div class="row">
       <div class="col-11 col-lg-10 mx-auto">
-        <h2 class="section-title">Some things I’ve created.</h2>
+        <h2 class="h4 section-title text-center">Some things I’ve created.</h2>
       </div>
-      <div class="col-11 col-lg-10 mx-auto">
-        <div class="card">
-          
-
-          <img src="/assets/images/card-image.jpg" alt="" class="card-img" />
-          <div class="card-content">
-            <h2 class="card-title">Image Delivery Method.</h2>
-            <p class="card-body">Resolution switching, art direction, low quality image placeholder.</p>
-            <Button href="/" title="read more" primary="primary" />
-
+      <div class="col col-12">
+        <div class="card-container mx-auto mt-4">
+          <div class="card">
+            <img src="/assets/images/card-image.jpg" alt="" class="card-img" />
+            <div class="card-content">
+              <h2 class="card-title h5">Image Delivery Method.</h2>
+              <p class="card-body">
+                Resolution switching, art direction, low quality image
+                placeholder.
+              </p>
+              <Button href="/" title="read more" primary="primary" />
+            </div>
           </div>
-        </div>
-        <div class="card">
-          
-
-          <img src="/assets/images/card-image.jpg" alt="" class="card-img" />
-          <div class="card-content">
-            <h2 class="card-title">Image Delivery Method.</h2>
-            <p class="card-body">Resolution switching, art direction, low quality image placeholder.</p>
-            <Button href="/" title="read more" primary="primary" />
-
+          <div class="card">
+            <img src="/assets/images/card-image.jpg" alt="" class="card-img" />
+            <div class="card-content">
+              <h2 class="card-title h5">Image Delivery Method.</h2>
+              <p class="card-body">
+                Resolution switching, art direction, low quality image
+                placeholder.
+              </p>
+              <Button href="/" title="read more" primary="primary" />
+            </div>
           </div>
         </div>
       </div>
