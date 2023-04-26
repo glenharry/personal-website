@@ -1,10 +1,10 @@
 ---
-const { title, href, primary, secondary, small, large } = Astro.props;
+const { title, href, rank, small, large } = Astro.props;
 ---
 
 <a
   href={href}
-  class={`btn btn${secondary ? "-secondary" : ""} 
+  class={`btn btn${rank === "secondary" ? "-secondary" : ""} 
   btn-${small ? "small" : large ? "large" : "small"}`}
 >
   {title}

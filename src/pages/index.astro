@@ -2,6 +2,7 @@
 import MasterLayout from "../layouts/MasterLayout.astro";
 import HomeHero from "../components/HomeHero.astro";
 import SkillTag from "../components/SkillTag.astro";
+import Card from "../components/Card.astro";
 import Button from "../components/buttons/Button.astro";
 const skills = [
   "html",
@@ -15,6 +16,30 @@ const skills = [
   "bootstrap",
   "ui design",
   "ux design",
+];
+
+const myWork = [
+  {
+    title: "Image Delivery Method",
+    body: "Resolution switching, art direction and a low quality image place holder? See how I did it...",
+    cta: "Read more",
+    img: "/assets/images/card-image.jpg",
+    href: "#",
+  },
+  {
+    title: "Image Delivery Method",
+    body: "Resolution switching, art direction and a low quality image place holder? See how I did it...",
+    cta: "Read more",
+    img: "/assets/images/card-image.jpg",
+    href: "#",
+  },
+  {
+    title: "Image Delivery Method",
+    body: "Resolution switching, art direction and a low quality image place holder? See how I did it...",
+    cta: "Read more",
+    img: "/assets/images/card-image.jpg",
+    href: "#",
+  },
 ];
 ---
 
@@ -80,26 +105,37 @@ const skills = [
       </div>
       <div class="col col-12">
         <div class="card-container mx-auto mt-4">
+          {
+            myWork.map((card) => (
+              <Card
+                href={card.href}
+                title={card.title}
+                body={card.body}
+                img={card.img}
+                cta={card.cta}
+              />
+            ))
+          }
           <div class="card">
             <img src="/assets/images/card-image.jpg" alt="" class="card-img" />
             <div class="card-content">
-              <h2 class="card-title h5">Image Delivery Method.</h2>
+              <h3 class="card-title h5">Image Delivery Method.</h3>
               <p class="card-body">
                 Resolution switching, art direction, low quality image
                 placeholder.
               </p>
-              <Button href="/" title="read more" primary="primary" />
+              <Button href="/" title="read more" rank="secondary" />
             </div>
           </div>
           <div class="card">
             <img src="/assets/images/card-image.jpg" alt="" class="card-img" />
             <div class="card-content">
-              <h2 class="card-title h5">Image Delivery Method.</h2>
+              <h3 class="card-title h5">Image Delivery Method.</h3>
               <p class="card-body">
                 Resolution switching, art direction, low quality image
                 placeholder.
               </p>
-              <Button href="/" title="read more" primary="primary" />
+              <Button href="/" title="read more" rank="primary" />
             </div>
           </div>
         </div>

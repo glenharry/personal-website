@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  flex-wrap: wrap;
   @media screen and (min-width: 768px) {
     flex-direction: row;
   }
@@ -11,9 +12,9 @@
   margin: 0 auto;
   color: var(--theme-on-primary);
   width: 100%;
-  border-radius: var(--theme-button-border-radius);
-  border: solid 1px var(--theme-on-primary);
-  padding: 1rem;
+  border-radius: var(--theme-border-radius);
+  border: solid 2px #555;
+  padding: 2rem;
   @media screen and (min-width: 480px) {
     width: 80%;
   }

@@ -21,8 +21,9 @@
   color: var(--theme-primary);
 }
 .btn-secondary {
-  background-color: var(--theme-primary);
+  background-color: unset;
   color: var(--theme-on-primary);
+  border: solid 1px var(--theme-on-primary);
 }
 .btn:hover {
   background-color: var(--theme-on-primary-hover);
@@ -90,9 +91,9 @@ button.btn {
 }
 
 .divider-decoration {
-margin: 0 auto;
-width: 123px;
-height: 6px;
-background: var(--theme-primary-surface-1);
-opacity: 1;
+  margin: 0 auto;
+  width: 123px;
+  height: 6px;
+  background: var(--theme-primary-surface-1);
+  opacity: 1;
 }
