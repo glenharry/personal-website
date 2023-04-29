@@ -1,9 +1,10 @@
-@import url("./userInterface/card.scss");
+@import "./userInterface/card.scss";
 
 /* ui components */
 /* ui components */
 /* ui components */
 .btn {
+  position: relative;
   width: fit-content;
   padding: 0.36rem 0.92rem;
   margin-bottom: 0;
@@ -14,6 +15,7 @@
   border: none;
   border-radius: var(--theme-button-border-radius);
   font-weight: 500;
+  z-index: 2;
 }
 
 .btn {

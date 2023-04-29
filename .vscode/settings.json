@@ -5,5 +5,6 @@
     "opentype",
     "sono",
     "truetype"
-  ]
+  ],
+  "terminal.integrated.allowChords": false
 }

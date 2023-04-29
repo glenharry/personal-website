@@ -1,0 +1,77 @@
+VSCode Media Query Snippets
+Never write a @media query again!
+For some reason, it took me a really long time to learn how to actually write a simple media query for responsive CSS. It has been years of me copying and pasting the syntax from old files or when I was supremely lazy, googling it. Even though googling it took even more effort!
+
+I recently committed a basic media query to memory. One that I could use in my day to day job. Nothing fancy. But it gets what I need to do done.
+
+@media screen (min-width:768px){insert styles here}
+
+Basic as it comes. I don’t think I really NEED to put in the screen part. But it certainly doesn’t seem to hurt.
+
+Now, VSCode has a Media Query snippet built in, and it is ok. It gives you the @media screen {} pretty quickly. Just type in @ and it sets you up nicely. But it highlights the default media property screen and then gives you some curly braces to work with for your custom styles.
+
+This is great. But I was chasing something a little more custom for my needs.
+
+VSCode has this functionality built right in with custom snippets & Emmet. You can define your own Emmet prefix and give it the code snippet you want it to spit out.
+
+In my case, I thought it would be great to be able to just hit @ and then return and it would give a drop down list of options (in my case: min-width: & max-width:), then hit return and it would place the cursor right after the semicolon. Then you could just type in your value hit tab and then have VSCode drop you straight into the {} to get cracking with your custom properties for this Media Query.
+
+I watched a couple of videos, read a few articles and voila! I have the following:
+
+Animation of the following code being automatically generated: @media (max-width: 767px){color: red}
+It’s not ground breaking. But it certainly will make life just that little bit easier.
+
+“And how do I generate this lovely little automation?” you ask? I’m so glad you asked!
+
+Open VSCode
+Open the command pallet. CMD + SHIFT + p on a Mac or CTRL + SHIFT + P on a PC.
+Type in >configure user snippets and hit return
+Here you can choose to create a new GLOBAL snippet file or you can choose the language for which you would like your snippet to be assigned. In my case i chose SCSS as that is where I do most of my CSS.
+You will then see a bit of a how to from VSCode inside some {}. This is where the magic happens
+Copy the code snippet from Box 1 at the bottom of this article.
+Head back to VSCode and Select the entire contents of the .json file and paste this in its place.
+Hit save.
+You can now go test this bad boy out! Create yourself a new file with the correct extension for you, in my case this was a .scss file. And just type out an @ .
+
+VSCode has the default available, but you should be able to use the Drop Down List and select your newly created snippet. And VSCode will remember that you selected this one. So next time you type @ it will preselect your new snippet.
+
+I have created a few other versions that you can take advantage of if you so choose. Find them below in Box 2 & 3. Just place it after the last , from the first snippet.
+
+Thank you for reading!
+
+Box 1. Media Query with Min/Max Options
+
+{
+"Media Query with options": {
+"prefix": "@",
+"body": "@media screen (${1|min-width:,max-width:|}$2px){$3}",
+"description": "Media Query Min"
+},
+}
+Box 2. Media Query Min Width
+
+{
+"Media Query Min Width": {
+"prefix": "@min",
+"body": "@media screen (min-width:$1px){$2}",
+"description": "Media Query Min"
+},
+}
+Box 3. Media Query Max Width
+
+{
+"Media Query Max Width": {
+"prefix": "@max",
+"body": "@media screen (max-width:$1px){$2}",
+"description": "Media Query Max"
+},
+}
+Box 4. Media Query Min and Width
+
+{  
+"Media Query Min/Max Width": {
+"prefix": "@minmax",
+"body": "@media screen (min-width:$1px) and (max-width:$2px){$3}",
+"description": "Media Query Min/Max Width"
+},
+}

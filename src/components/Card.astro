@@ -4,7 +4,7 @@ import Button from "./buttons/Button.astro";
 const { href, title, body, cta, img } = Astro.props;
 ---
 
-<a href={href}>
+<a href={href} aria-label={title} class="wrapper-link"></a>
   <div class="card">
     <img src={img} alt="" class="card-img" />
     <div class="card-content">
@@ -15,4 +15,4 @@ const { href, title, body, cta, img } = Astro.props;
       <Button href={href} title={cta} rank="secondary" />
     </div>
   </div>
-</a>
+

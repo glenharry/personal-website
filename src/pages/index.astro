@@ -24,25 +24,44 @@ const myWork = [
     body: "Resolution switching, art direction and a low quality image place holder? See how I did it...",
     cta: "Read more",
     img: "/assets/images/card-image.jpg",
-    href: "#",
+    href: "index.html",
   },
   {
     title: "Image Delivery Method",
     body: "Resolution switching, art direction and a low quality image place holder? See how I did it...",
     cta: "Read more",
     img: "/assets/images/card-image.jpg",
-    href: "#",
+    href: "index.html",
   },
   {
     title: "Image Delivery Method",
     body: "Resolution switching, art direction and a low quality image place holder? See how I did it...",
     cta: "Read more",
     img: "/assets/images/card-image.jpg",
-    href: "#",
+    href: "index.html",
+  },
+  {
+    title: "Image Delivery Method",
+    body: "Resolution switching, art direction and a low quality image place holder? See how I did it...",
+    cta: "Read more",
+    img: "/assets/images/card-image.jpg",
+    href: "index.html",
+  },
+  {
+    title: "Image Delivery Method",
+    body: "Resolution switching, art direction and a low quality image place holder? See how I did it...",
+    cta: "Read more",
+    img: "/assets/images/card-image.jpg",
+    href: "index.html",
   },
 ];
 ---
 
+<style is:inline>
+  . {
+    display: none !important;
+  }
+</style>
 <MasterLayout>
   <HomeHero
     classes=""
@@ -50,8 +69,7 @@ const myWork = [
     body="Turning Design into Reality with Clean, Accessible Code."
     cta="Contact"
   />
-
-  <div class="container module">
+  <div class="container module ">
     <div class="row">
       <div class="col-12 col-lg-8 mx-auto">
         <p>
@@ -85,8 +103,7 @@ const myWork = [
       </div>
     </div>
   </div>
-
-  <div class="container module">
+  <div class="container module ">
     <div class="row">
       <div class="col-10 col-lg-6 mx-auto">
         <div class="skill-tag-wrapper">
@@ -95,9 +112,10 @@ const myWork = [
       </div>
     </div>
   </div>
-  <div class="container module">
+  <div class="container module ">
     <hr class="divider-decoration" />
   </div>
+
   <div class="container module">
     <div class="row">
       <div class="col-11 col-lg-10 mx-auto">
@@ -116,30 +134,10 @@ const myWork = [
               />
             ))
           }
-          <div class="card">
-            <img src="/assets/images/card-image.jpg" alt="" class="card-img" />
-            <div class="card-content">
-              <h3 class="card-title h5">Image Delivery Method.</h3>
-              <p class="card-body">
-                Resolution switching, art direction, low quality image
-                placeholder.
-              </p>
-              <Button href="/" title="read more" rank="secondary" />
-            </div>
-          </div>
-          <div class="card">
-            <img src="/assets/images/card-image.jpg" alt="" class="card-img" />
-            <div class="card-content">
-              <h3 class="card-title h5">Image Delivery Method.</h3>
-              <p class="card-body">
-                Resolution switching, art direction, low quality image
-                placeholder.
-              </p>
-              <Button href="/" title="read more" rank="primary" />
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </div>
+
+
 </MasterLayout>

@@ -78,3 +78,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.container {
+  padding: 0 !important;
+  max-width: 1632px;
+}

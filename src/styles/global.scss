@@ -37,3 +37,11 @@ pre .language-id {
     margin-top: 4rem;
   }
 }
+
+.wrapper-link {
+  position: absolute;
+  height: 100%;
+  inset: 0;
+  width: 100%;
+  z-index: 1;
+}
