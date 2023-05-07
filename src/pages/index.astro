@@ -4,6 +4,7 @@ import HomeHero from "../components/HomeHero.astro";
 import SkillTag from "../components/SkillTag.astro";
 import Card from "../components/Card.astro";
 import Button from "../components/buttons/Button.astro";
+
 const skills = [
   "html",
   "css",
@@ -62,6 +63,7 @@ const myWork = [
     display: none !important;
   }
 </style>
+
 <MasterLayout>
   <HomeHero
     classes=""
@@ -69,7 +71,7 @@ const myWork = [
     body="Turning Design into Reality with Clean, Accessible Code."
     cta="Contact"
   />
-  <div class="container module ">
+  <div class="container module">
     <div class="row">
       <div class="col-12 col-lg-8 mx-auto">
         <p>
@@ -103,7 +105,7 @@ const myWork = [
       </div>
     </div>
   </div>
-  <div class="container module ">
+  <div class="container module">
     <div class="row">
       <div class="col-10 col-lg-6 mx-auto">
         <div class="skill-tag-wrapper">
@@ -112,7 +114,7 @@ const myWork = [
       </div>
     </div>
   </div>
-  <div class="container module ">
+  <div class="container module">
     <hr class="divider-decoration" />
   </div>
 
@@ -137,17 +139,110 @@ const myWork = [
         </div>
       </div>
     </div>
-
   </div>
-<div class="container module">
- 
-  
-<h2>  Some nice words about me.</h2>
-<span>“</span> 
-<blockquote>
-“Glen has been instrumental in the success of the new T2 website, exemplifying the T2 values in many ways. During the build phase he demonstrated the value of Curiosity while also showing great passion for the project. He showed generosity through the sharing of his knowledge to help other team members and he absolutely took accountability for outcomes. Thank you, Glen, for your outstanding contribution!”
-</blockquote>
-<span>“</span> 
-</div>
+  <style>
+    .swiper {
+      width: 100%;
+    }
+    .swiper-wrapper {
+      width: 90%;
+    }
+    .swiper-slide {
+      width: 200px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #fff;
+    }
 
+    .swiper-button-prev,
+    .swiper-button-next svg {
+      fill: #fff;
+    }
+  </style>
+  <div class="container module">
+    <h2>Some nice words about me.</h2>
+    <span>“</span>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <blockquote>
+            “Glen has been instrumental in the success of the new T2 website,
+            exemplifying the T2 values in many ways. During the build phase he
+            demonstrated the value of Curiosity while also showing great passion
+            for the project. He showed generosity through the sharing of his
+            knowledge to help other team members and he absolutely took
+            accountability for outcomes. Thank you, Glen, for your outstanding
+            contribution!”
+          </blockquote>
+        </div>
+        <div class="swiper-slide">
+          <blockquote>
+            “Glen has been instrumental in the success of the new T2 website,
+            exemplifying the T2 values in many ways. During the build phase he
+            demonstrated the value of Curiosity while also showing great passion
+            for the project. He showed generosity through the sharing of his
+            knowledge to help other team members and he absolutely took
+            accountability for outcomes. Thank you, Glen, for your outstanding
+            contribution!”
+          </blockquote>
+        </div>
+        <div class="swiper-slide">
+          <blockquote>
+            “Glen has been instrumental in the success of the new T2 website,
+            exemplifying the T2 values in many ways. During the build phase he
+            demonstrated the value of Curiosity while also showing great passion
+            for the project. He showed generosity through the sharing of his
+            knowledge to help other team members and he absolutely took
+            accountability for outcomes. Thank you, Glen, for your outstanding
+            contribution!”
+          </blockquote>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination">xx</div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+          ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+          ></path>
+        </svg>
+      </div>
+      <div class="swiper-button-next">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+          ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+          ></path>
+        </svg>
+      </div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <span>“</span>
+  </div>
+
+  <!-- swiper test -->
+
+  <!-- Slider main container -->
+
+  <script>
+    const swiper = new Swiper(".swiper", {
+      autoplay: {
+        delay: 5000, // time between each slide transition in milliseconds
+        disableOnInteraction: true, // enable or disable the autoplay when user interacts with the swiper
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </MasterLayout>
