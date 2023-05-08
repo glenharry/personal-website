@@ -1,0 +1,40 @@
+.swiper {
+  width: 100%;
+}
+.swiper-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.swiper-slide {
+  width: 100%;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+}
+
+.swiper-button-prev,
+.swiper-button-next svg {
+  fill: #fff;
+}
+
+.swiper-slide blockquote {
+  border: none;
+  padding: 0 4rem;
+  margin: 0;
+}
+
+.quote {
+  width: 100%;
+  text-align: center;
+}
+
+.quote-bottom {
+  // transform: rotate(180deg);
+}
+
+.quote svg {
+  width: 48px;
+  fill: #fff;
+}
