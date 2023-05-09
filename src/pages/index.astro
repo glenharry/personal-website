@@ -19,6 +19,26 @@ const skills = [
   "ux design",
 ];
 
+const testimonials = [
+  {
+    name: "Sally Lennox",
+    title: "Head of Digital",
+    quote:
+      "Glen has played a crucial role in the successful development of our new website, showcasing his exceptional front-end development skills throughout the process. His curiosity and passion for the project were evident, driving him to explore innovative solutions and produce outstanding results. Glen was also highly collaborative, generously sharing his knowledge with other team members to ensure the success of the project. As a dedicated professional, he took full responsibility for the outcomes and delivered beyond our expectations. Thank you, Glen, for your remarkable contribution as a front-end engineer!",
+  },
+  {
+    name: "Damien Senna",
+    title: "Ecommerce Manager",
+    quote:
+      "I have had the pleasure of working with Glen on web development projects. He is an excellent front end developer who goes above and beyond to produce high-quality code. Glen has shown leadership and initiative in his work, particularly with regards to online accessibility and Core Web Vitals. His skills and commitment are an asset to any company looking for a front end engineer.",
+  },
+  {
+    name: "Hao Soon",
+    title: "UX/UI Designer",
+    quote:
+      "As a UX/UI designer, I've had the pleasure of working with an amazing developer like Glen. He is a reliable and approachable developer with a meticulous work attitude. We have collaborated on many website features and pages, creating precise, pixel-perfect designs that are accessible to all users. Glen's knowledge of web accessibility standards and his commitment to team success make him a valuable member of our team. I would highly recommend him to anyone looking for a skilled and dedicated developer.",
+  },
+];
 const myWork = [
   {
     title: "Image Delivery Method",
@@ -151,91 +171,40 @@ const myWork = [
         ></path>
       </svg>
     </div>
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <blockquote>
-            “Glen has been instrumental in the success of the new T2 website,
-            exemplifying the T2 values in many ways. During the build phase he
-            demonstrated the value of Curiosity while also showing great passion
-            for the project. He showed generosity through the sharing of his
-            knowledge to help other team members and he absolutely took
-            accountability for outcomes. Thank you, Glen, for your outstanding
-            contribution!”
-          </blockquote>
+    <div class="testimonials-wrapper">
+      <div class="testimonial">
+        <div class="testimonial-person">
+          <div class="testimonial-person-name">
+            {testimonials[0].name}
+          </div>
+          <div class="testimonial-person-title">
+            {testimonials[0].title}
+          </div>
         </div>
-        <div class="swiper-slide">
-          <blockquote>
-            Glen is an excellent Front End UI Developer who I have had the
-            pleasure of working with during my whole time at T2. Not only does
-            Glen do his BAU front end work at the highest standards, he has also
-            shown leadership and a passion for important issues such as online
-            accessibility. Some of Glen's other best work involve improving the
-            codebase of the T2 website in order to improve T2's Core Web Vitals.
-            This was done on his own initiative where Glen went above and beyond
-            to achieve these positives for T2. A true leader in this space, I am
-            fortunate enough to have worked with and managed Glen throughout my
-            time at T2. I will always recommend Glen to any company interested
-            in his skills or leadership.
-          </blockquote>
-        </div>
-        <div class="swiper-slide">
-          <blockquote>
-            “Glen has been instrumental in the success of the new T2 website,
-            exemplifying the T2 values in many ways. During the build phase he
-            demonstrated the value of Curiosity while also showing great passion
-            for the project. He showed generosity through the sharing of his
-            knowledge to help other team members and he absolutely took
-            accountability for outcomes. Thank you, Glen, for your outstanding
-            contribution!”
-          </blockquote>
+        <div class="testimonial-body">
+          <p>{testimonials[0].quote}</p>
         </div>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination">xx</div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev">
+      <div class="quote quote-bottom">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
           ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
           <path
-            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+            d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
           ></path>
         </svg>
       </div>
-      <div class="swiper-button-next">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
-          ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-          <path
-            d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
-          ></path>
-        </svg>
-      </div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
     </div>
-    <div class="quote quote-bottom">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
-        ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-        <path
-          d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
-        ></path>
-      </svg>
-    </div>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        autoplay: {
+          delay: 5000, // time between each slide transition in milliseconds
+          disableOnInteraction: true, // enable or disable the autoplay when user interacts with the swiper
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </div>
-  <script>
-    const swiper = new Swiper(".swiper", {
-      autoplay: {
-        delay: 5000, // time between each slide transition in milliseconds
-        disableOnInteraction: true, // enable or disable the autoplay when user interacts with the swiper
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
 </MasterLayout>

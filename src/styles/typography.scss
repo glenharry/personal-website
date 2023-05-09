@@ -142,7 +142,8 @@ h1,
 h2,
 h3 {
   font-family: var(--theme-font-family-serif);
-  font-weight: 700;
+  line-height: 1.1;
+  font-weight: 400;
 }
 
 h1 {
@@ -155,16 +156,6 @@ h2 {
 
 h3 {
   font-size: var(--font-size-lg);
-}
-
-h1,
-h2 {
-  line-height: 1.1;
-  font-weight: 400;
-}
-
-h3 {
-  font-weight: 500;
 }
 
 h6 {
@@ -181,9 +172,9 @@ p {
   margin: 0 0 1rem 0;
   font-family: var(--theme-font-family-serif);
 }
-
+// TODO: change font family to be san serif
 p {
-  font-size: 1rem;
+  font-size: var(--font-size-base);
 }
 
 blockquote {
@@ -217,4 +208,14 @@ blockquote {
 
 .h7 {
   font-size: var(--font-size-sm);
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.h7 {
+  font-weight: 400;
 }

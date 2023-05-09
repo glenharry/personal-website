@@ -4,3 +4,16 @@
   justify-content: center;
   height: 100%;
 }
+
+.testimonial {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-person {
+  width: 25%;
+}
+
+.testimonial-body {
+  width: 75%;
+}
