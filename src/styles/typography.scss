@@ -97,35 +97,38 @@
 /* Fluid font size variables, for browsers that support clamp */
 @supports (font-size: clamp(1rem, 1vw, 1rem)) {
   :root {
-    --font-size-sm: clamp(0.8rem, 0.3vw + 0.7rem, 0.9rem);
-    --font-size-base: clamp(1rem, 0.5vw + 0.9rem, 1.3rem);
-    --font-size-md: clamp(1.3rem, 0.8vw + 1.1rem, 1.7rem);
-    --font-size-lg: clamp(1.6rem, 1.3vw + 1.3rem, 2.2rem);
-    --font-size-xl: clamp(2rem, 2vw + 1.5rem, 3rem);
-    --font-size-xxl: clamp(2.4rem, 2.9vw + 1.8rem, 3.9rem);
-    --font-size-xxxl: clamp(3.1rem, 4.3vw + 2rem, 5.3rem);
+    --font-size-xs: clamp(0.6rem, 0.1vw + 0.5rem, 0.6rem);
+    --font-size-sm: clamp(0.8rem, 0.2vw + 0.7rem, 0.9rem);
+    --font-size-base: clamp(1rem, 0.3vw + 0.9rem, 1.1rem);
+    --font-size-md: clamp(1.3rem, 0.3vw + 1.2rem, 1.5rem);
+    --font-size-lg: clamp(1.7rem, 0.4vw + 1.6rem, 2rem);
+    --font-size-xl: clamp(2.3rem, 0.6vw + 2.2rem, 2.6rem);
+    --font-size-xxl: clamp(3rem, 0.8vw + 2.8rem, 3.4rem);
+    --font-size-sxl: clamp(4rem, 1vw + 3.8rem, 4.5rem);
   }
 }
 /* Fallback variables for browsers that don't support clamp */
 @supports not (font-size: clamp(1rem, 1vw, 1rem)) {
   :root {
+    --font-size-xs: 0.6rem;
     --font-size-sm: 0.8rem;
     --font-size-base: 1rem;
     --font-size-md: 1.3rem;
-    --font-size-lg: 1.6rem;
-    --font-size-xl: 2rem;
-    --font-size-xxl: 2.4rem;
-    --font-size-xxxl: 3.1rem;
+    --font-size-lg: 1.7rem;
+    --font-size-xl: 2.3rem;
+    --font-size-xxl: 3rem;
+    --font-size-sxl: 4rem;
   }
   @media screen and (min-width: 1200px) {
     :root {
+      --font-size-xs: 0.6rem;
       --font-size-sm: 0.9rem;
-      --font-size-base: 1.3rem;
-      --font-size-md: 1.7rem;
-      --font-size-lg: 2.2rem;
-      --font-size-xl: 3rem;
-      --font-size-xxl: 3.9rem;
-      --font-size-xxxl: 5.3rem;
+      --font-size-base: 1.1rem;
+      --font-size-md: 1.5rem;
+      --font-size-lg: 2rem;
+      --font-size-xl: 2.6rem;
+      --font-size-xxl: 3.4rem;
+      --font-size-sxl: 4.5rem;
     }
   }
 }
@@ -133,10 +136,16 @@
 html,
 body {
   line-height: 1.5;
-  font-family: var(--theme-font-family-serif);
+  font-family: var(--theme-font-family-sans);
   font-size: var(--font-size-base);
   color: var(--theme-primary-on-bg);
 }
+/* 
+TODO: Typography needs to be updated the font sizes are all off. 
+      Need 3 super sized hero title classes
+      Need to make h1 through to h6 to be a little more regular
+      .h1 through to .h6 should be sized to match the h1 through to h6 so semantic markup can be used with more customisable styles
+*/
 
 h1,
 h2,
@@ -147,40 +156,39 @@ h3 {
 }
 
 h1 {
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-sxl);
 }
 
 h2 {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xxl);
 }
 
 h3 {
+  font-size: var(--font-size-xl);
+}
+
+h4 {
   font-size: var(--font-size-lg);
+  font-weight: 600;
 }
-
+h5 {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+}
 h6 {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0 0 1rem 0;
-  font-family: var(--theme-font-family-serif);
-}
-// TODO: change font family to be san serif
 p {
   font-size: var(--font-size-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 blockquote {
   font-style: italic;
   font-size: var(--font-size-base);
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 1rem;
   padding-left: 1.5rem;
   border-left: 0.25rem solid var(--theme-primary-on-bg);
@@ -188,26 +196,26 @@ blockquote {
 
 // Class sizings
 .h1 {
-  font-size: var(--font-size-xxxl);
+  font-size: var(--font-size-sxl);
 }
 .h2 {
-  font-size: var(--font-size-xxl);
-}
-.h3 {
   font-size: var(--font-size-xl);
 }
-.h4 {
+.h3 {
   font-size: var(--font-size-lg);
 }
-.h5 {
+.h4 {
   font-size: var(--font-size-md);
 }
-.h6 {
+.h5 {
   font-size: var(--font-size-base);
+}
+.h6 {
+  font-size: var(--font-size-sm);
 }
 
 .h7 {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
 }
 
 .h1,
